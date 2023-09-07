@@ -7,8 +7,8 @@ import bcrypt
 
 def hash_password(password: str) -> bytes:
     """ Returns a salted, hashed password, which is a byte string """
-    encode = password.encode()
-    hashed = bcrypt.hashpw(encode, bcrypt.gensalt())
+    encoded = password.encode()
+    hashed = bcrypt.hashpw(encoded, bcrypt.gensalt())
 
     return hashed
 
